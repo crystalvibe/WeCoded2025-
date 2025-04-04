@@ -26,5 +26,13 @@ export default defineConfig(({ mode }) => ({
     commonjsOptions: {
       include: [/aos/, /node_modules/],
     },
+    rollupOptions: {
+      external: [],
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'aos'],
+        },
+      },
+    },
   },
 }));
