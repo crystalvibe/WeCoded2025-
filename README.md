@@ -1,4 +1,4 @@
-# 🎨 Coded Canvas Celebration
+#                                                                                             2025 WeCoded Challenge
 
 <div align="center">
   
