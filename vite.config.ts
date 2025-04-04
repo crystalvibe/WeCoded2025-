@@ -19,4 +19,12 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['aos'],
+  },
+  build: {
+    commonjsOptions: {
+      include: [/aos/, /node_modules/],
+    },
+  },
 }));
