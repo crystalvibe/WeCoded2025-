@@ -1,8 +1,10 @@
-# <center>2025 WeCoded Challenge</center>
+<div align="center">
+<h1>2025 WeCoded Challenge</h1>
+</div>
 
 <div align="center">
   
-  ![Coded Canvas Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbThzaTAxcXIyMWNmYWZyNGlncHRhZmdncnNtdHZ6dWh0Z2VpeXN0ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HKO4bzWGfdqz0OVqwt/giphy.gif)
+  ![Coded Canvas Banner](https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif?cid=790b76117gyccho77dw0efxd2q8fzfwjzxig5htebhtd2uuw&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
