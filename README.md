@@ -1,4 +1,4 @@
-#                                                                                             2025 WeCoded Challenge
+#                                                                                                                                                                                           2025 WeCoded Challenge
 
 <div align="center">
   
