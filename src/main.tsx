@@ -11,24 +11,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import AOS from 'aos';
+// Import AOS styles
 import 'aos/dist/aos.css';
 
-/**
- * Initialize AOS (Animate On Scroll) library with custom settings
- * - duration: 800ms for each animation
- * - once: false -> animations will trigger every time element comes into view
- * - mirror: true -> animations can play in reverse when scrolling up
- * - offset: 120px -> animation starts when element is 120px from viewport edge
- * - easing: smooth cubic easing for natural-feeling animations
- */
-AOS.init({
-  duration: 800,
-  once: false,
-  mirror: true,
-  offset: 120,
-  easing: 'ease-out-cubic'
-});
+// Initialize AOS asynchronously
+const initAOS = async () => {
+  const AOS = (await import('aos')).default;
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true,
+    offset: 120,
+    easing: 'ease-out-cubic'
+  });
+};
+
+// Initialize AOS
+initAOS().catch(console.error);
 
 // Find and verify the root element where React will be mounted
 const rootElement = document.getElementById("root");
