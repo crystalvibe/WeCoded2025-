@@ -49,9 +49,9 @@ const CommunitySection = () => {
   
   // Community statistics with colors for visual differentiation
   const stats = [
-    { number: "3,000+", label: "STORIES", color: "#4531EA" },
+    { number: "1,200+", label: "STORIES", color: "#4531EA" },
     { number: "85+", label: "COUNTRIES", color: "#9D00E5" },
-    { number: "12K+", label: "COMMUNITY", color: "#CCEA71" }
+    { number: "24/7", label: "COMMUNITY", color: "#CCEA71" }
   ];
 
   // Comment IDs containing positive DEV.to testimonials for API fetching
