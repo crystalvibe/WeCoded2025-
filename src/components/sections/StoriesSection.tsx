@@ -98,17 +98,29 @@ const StoriesSection: React.FC = () => {
     const fetchStories = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('https://dev.to/api/articles?tag=wecoded');
-        if (!response.ok) {
+        // Fetch both wecoded and shecoded articles
+        const [wecodedResponse, shecodedResponse] = await Promise.all([
+          fetch('https://dev.to/api/articles?tag=wecoded'),
+          fetch('https://dev.to/api/articles?tag=shecoded')
+        ]);
+
+        if (!wecodedResponse.ok || !shecodedResponse.ok) {
           throw new Error('Failed to fetch stories');
         }
-        const data = await response.json();
-        setStories(data);
+
+        const wecodedData = await wecodedResponse.json();
+        const shecodedData = await shecodedResponse.json();
+
+        // Combine both arrays and remove duplicates based on article id
+        const combinedStories = [...wecodedData, ...shecodedData];
+        const uniqueStories = Array.from(new Map(combinedStories.map(story => [story.id, story])).values());
+
+        setStories(uniqueStories);
       } catch (error) {
         console.error("Error fetching stories:", error);
         toast({
           title: "Error loading stories",
-          description: "We couldn't load the latest WeCoded stories. Please try again later.",
+          description: "We couldn't load the latest stories. Please try again later.",
           variant: "destructive",
         });
       } finally {
