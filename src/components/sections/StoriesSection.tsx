@@ -173,16 +173,16 @@ const StoriesSection: React.FC = () => {
                 STORIES
               </h1>
               <div 
-                className="absolute bottom-5 right-0 text-6xl md:text-8xl font-bold text-[#9D00E5] uppercase -rotate-6 font-mono"
-                style={{ transform: `translateX(${scrollPercent * 60}px)` }}
-              >
-                DEV
-              </div>
-              <div 
                 className="absolute -top-4 -left-2 text-4xl md:text-6xl font-bold text-[#CCEA71] uppercase rotate-3 font-mono"
                 style={{ transform: `translateX(${scrollPercent * 90}px)` }}
               >
                 CODED
+              </div>
+              <div 
+                className="absolute bottom-5 right-0 text-6xl md:text-8xl font-bold text-[#9D00E5] uppercase -rotate-6 font-mono"
+                style={{ transform: `translateX(${scrollPercent * 60}px)` }}
+              >
+                DEV
               </div>
             </div>
             
